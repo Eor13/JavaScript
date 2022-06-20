@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Identificação de Nacionalidade</h1>
+    Digite seu país de origem: <input type="text" name="txtori" id="país">
+    <input type="button" value="Confirme" onclick="confirmar">
+    <div id="res">
+
+    </div>
+    <script>
+        var país = window.document.getElementById('país')
+        var res = window.document.querySelector('div#res')
+
+        function confirmar() {
+            res.innerHTML = `Você chegou do(a) ${país}, então...`
+
+            if ( país != 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            } else{
+                res.innerHTML += `<p>Você é <strong>Brasileiro(a)</strong>.</p>`
+            }
+
+        }
+    </script>
+
+</body>
+</html>
