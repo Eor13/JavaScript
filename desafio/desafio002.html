@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio boas-vindas</title>
+    <style>
+        body{
+            font: normal 20pt 'Georgia';
+            background-color: lightblue;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+        button{
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-size: 1.5em;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 20px;
+        }
+        button:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1.5em;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Boas-Vindas</h1>
+    <button onclick="clique()">Inicie o desafio</button>
+    <script>
+        function clique(){
+            var nome = window.prompt('Qual é seu Nome?')
+            var idade = window.prompt(`Olá, ${nome}! Quantos anos vocÊ tem?`)
+            window.alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade!`)
+        }
+    </script>
+</body>
+</html>

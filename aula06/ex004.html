@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dados em JS</title>
     <style>
         body{
-            font: normal 2em monoespace;
+            font: normal 1em monoespace;
         }
     </style>
 </head>
 <body>
+    <h1>Trabalhando com Dados em JS V2.0</h1>
+    <button onclick="clicar()">Clique para Começar</button>
+    <section id="res">
+        <p>Aqui vai aparecer o resutado...</p>
+    </section>
     <script>
-        var nome = window.prompt('Qual é o seu Nome?')
-        document.write(`Olá <strong>${nome.toUpperCase()}</strong>!<br>`)
-        document.write(`Seu nome tem ${nome.length} letras.`)
-
+        function clicar(){
+            var nome = window. prompt('Qual seu Nome?')
+            var res = window.document.getElementById('res')
+            res.innerHTML += `<p> Olá <strong>${nome}</strong>. Prazer em conhece-lo.`
+            res.innerHTML += `<p>Ei, <strong>${nome.toUpperCase()}</strong>!<br></p>`
+            res.innerHTML += `<p>Seu nome tem ${nome.length} letras.</p>`
+        }
     </script>
 </body>
 </html>
