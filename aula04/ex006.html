@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número com JS</title>
+    <style>
+        body{
+            font: normal 2em monospace ;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+
+        }
+        button{
+            font-size: 16pt;
+            padding: 20px;
+            border-radius: 3px;
+            border-color:rgba(0, 0, 0, 0.3);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Samando dois números</h1>
+    <button onclick="começar()">Iniciar a soma</button>
+    <section class="ponte">
+        <p>O resultado está aqui..</p>
+    </section>
+    <script>
+        function começar(){
+           let n1 = Number( window.prompt('Digite um número:'))
+           let n2 =Number(window.prompt('Digite outro número:'))
+           let s = n1 + n2
+           let res = window.document.querySelector('section.ponte')
+           
+
+           res.innerHTML = `<p> A soma entre <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <strong>${s}</strong>.`
+           
+        }
+        
+
+    </script>
+</body>
+</html>
