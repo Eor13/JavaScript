@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Externo</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');   
+        body{
+            font-family: 'Tapestry', cursive;
+        }
+        button{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+    <button onclick="b1()">Botão 1</button>
+    <button onclick="b2()">Botão 2</button>
+    <button onclick="b3()">Botão 3</button>
+    <button onclick="b4()">Botão 4</button>
+    <section id="escrita">
+        <p>Aqui você registra suas ações com os botões acima.</p>
+    </section>
+    <script>
+        /*let primeiro = Primeiro
+        let segundo = Segundo
+        let terceiro = Terceiro
+        let uarto = Quarto*/
+        let res = window.document.getElementById('escrita')
+
+        function b1(){
+            res.innerHTML += `<p>Clicou no primeiro botão.</p>`
+        }
+        function b2(){
+            res.innerHTML += `<p>Clicou no segundo botão.</p>`
+        }
+        function b3(){
+            res.innerHTML += `<p>Clicou no terceiro botão.</p>`
+        }
+        function b4(){
+            res.innerHTML += `<p>Clicou no quarto botão.</p>`
+        }
+    </script>
+</body>
+</html>

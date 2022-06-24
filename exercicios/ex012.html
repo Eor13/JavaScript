@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O núme é ímpar ou é par?</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: auto;
+            font-size: 2em;
+            text-align: center;
+        }
+        button{
+            padding: 20px;
+            font-size: 1em;
+        }
+        h1{
+            text-transform: capitalize;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ímpar ou é par?</h1>
+    <button onclick="começar()">Clique para Iniciar</button>
+    <div id="res">
+        <p>O resultado vai parecer aqui...</p>
+    </div>
+    <script>
+        function começar() {
+            let num = Number(window.prompt('Digite um número:'))
+            let res = window.document.getElementById('res')
+            let valor
+            if (num % 2 == 0 ) {
+                valor = `PAR`
+            }else {
+                valor = `ÍMPAR`
+            }
+
+            res.innerHTML = ` O número ${num} é <strong>${valor}</strong> `
+        }
+    </script>
+</body>
+</html>
