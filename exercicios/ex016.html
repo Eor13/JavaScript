@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Calculando a Idade</title>
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 16pt;
+        }
+        button{
+            font-size: 18pt;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.43);
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculando a Idade</h1>
+    <button onclick="iniciar()">Iniciar</button>
+    <article id="informe">
+        <p>Aqui vai aparecer algo...</p>
+    </article>
+    <script>
+        function iniciar() {
+            let ano = window.prompt('Em que ano você Nasceu?')
+            var res = window.document.getElementById('informe')
+            let data = new Date
+            let agora = data.getFullYear()
+            let idade = agora -ano
+            res.innerHTML = `<p>Quem nasceu em ${ano} vai completar <strong>${idade}</strong> em ${agora}.</p>`
+
+
+
+        }
+    </script>
+</body>
+</html>

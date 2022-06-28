@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinha JS</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20pt;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+
+        }
+        button{
+            font-size: 18pt;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body onload="sortear()">
+    <h1>Tente adivinhar meu número</h1>
+    <button onclick="adivinha()" id="botao">Começar</button>
+    <section id="info">
+        <p>Escolha um número de 0 a 100.</p>
+    </section>
+    <script>
+        let res = window.document.getElementById('info')
+        res.innerHTML = `<p>Já pensei em um valor entre 1 e 100...</p>`
+        let pc = 0
+        let joke = 0
+            function sortear(){
+            let min = 1
+            let max = 100
+            let dif =max-min
+            let aleatorio = Math.random()
+            pc = min + Math.trunc(dif*aleatorio)//essa variavel substitui o 1 pc(linha 18).
+            }
+
+            function adivinha() {
+            joke = Number(window.prompt('Qual é o seu palpite?'))//essa variavel substitui o 1 joke(linha 19).
+            if (joke < pc){
+                res.innerHTML += `<p>Você falou ${joke}. Meu número é <strong>MAIOR</strong>.</p>`
+            }else if(joke > pc){
+                res.innerHTML += `<p>Você falou ${joke}. Meu número é <strong>MENOR</strong>.</p>`
+            }else if(joke == pc){
+                res.innerHTML += `<p><strong>Parabéns</strong>. Você acertou! Eu tinha sorteado o número ${pc}.</p>`
+                document.getElementById('botao').style.visibility = 'hidden'
+            }
+        }
+
+    </script>
+</body>
+</html>

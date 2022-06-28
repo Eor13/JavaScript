@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando Data e hora do Sistema</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18pt;
+            padding: 10px;
+            text-align: center;
+        }
+        button{
+            padding: 20px;
+            font-size: 17pt;
+        }
+        div{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisando Data e hora do Sistema</h1>
+    <button onclick="info()">Iniciar Análise</button>
+    <div id="data">
+        <p>Aqui vai aparecer...</p>
+
+    </div>
+    <script>
+        function info() {
+        let data = new Date
+        let dia = data.getDate()
+        let mes = data.getMonth()
+        let ano = data.getFullYear()
+        let semana = data.getDay()
+        let meses = new Array('JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ', )
+        let sem = new Array('DOM','SEG','TER','QUA','QUI','SEX','SAB')
+        /*switch(semana){
+            case 0: "Domingo";
+            break;
+            case 1: "Segunda";
+            break;
+            case 2: "Terça";
+            break;
+            case 3: "Quarta";
+            break;
+            case 4: "Quinta";
+            break;
+            case 5: "Sexta";
+            break;
+            case 6: "Sábado";
+            break;
+            default:
+            }
+        */
+        let hora = data.getHours()
+        let min = data.getMinutes()
+        let seg = data.getSeconds()
+
+        let res = window.document.getElementById('data')
+        
+        res.innerHTML = ` <div>
+        Dia: <mark>${dia}</mark><br>
+        Mês: <mark>${meses[mes]}</mark><br>
+        Ano:<mark>${ano}</mark><br>
+        Dia da Semana:<mark>${sem[semana]}</mark><br>
+        Hora:<mark>${hora}</mark><br>
+        Minutos:<mark>${min}</mark><br>
+        Segundos:<mark>${seg}</mark>
+        </div>`
+        }
+
+    </script>
+</body>
+</html>
