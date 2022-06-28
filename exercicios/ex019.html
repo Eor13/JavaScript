@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplas Ações</title>
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: monospace;
+            font-size: 20pt;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+        button{
+            padding: 20px;
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.418);
+            border-radius: 8px;
+            border-color: rgba(0, 0, 0, 0.37);
+        }
+        button:hover{
+            background-color: rgba(128, 128, 128, 0.74);
+            color: white;
+            border-color: rgba(0, 0, 0, 0.37);
+        }
+        h1{
+            font-weight: bolder;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Multiplas Ações</h1>
+    <button onclick="star()">Clique para Iniciar</button>
+    <div id="caixa">
+        <p>Clique no botão acima para começar.</p>
+    </div>
+    <script>
+        let res = window.document.getElementById('caixa')
+        function star(){
+            let n1 = Number(window.prompt('Digite o primeiro valor:'))
+            let n2 = Number(window.prompt('Digite o segundo valor:'))
+            //  '\n quebra de linha no prompt de comando.'
+            let ope = window.prompt(`Valores informados: ${n1} e ${n2}. \n Oque vamos fazer? \n[1]Somar \n[2]Subtrair  \n[3]Multiplar \n[4]dividir`)
+            res.innerHTML = `<p>Calculando...</p>`
+            //Solução com IF
+            if(ope == 1){
+               res.innerHTML +=`<p>${n1} + ${n2} = <strong>${n1+n2}</strong></p>` 
+            }else if(ope == 2){
+                res.innerHTML +=`<p>${n1} - ${n2} = <strong>${n1-n2}</strong></p>` 
+            }else if (ope == 3){
+                res.innerHTML +=`<p>${n1} x ${n2} = <strong>${n1*n2}</strong></p>` 
+            }else if(ope ==4){
+                res.innerHTML +=`<p>${n1} / ${n2} = <strong>${n1/n2}</strong></p>` 
+            }else if(ope >=5 && ope >=0){
+                res.innerHTML += `<p>OPÇÃO INVÁLIDA! Você digitou ${n1} e ${n2}, mas não sei o que fazer com eles.`
+            }
+            /*Solução com Switch
+            switch (op) { // A estrutura switch basicamente permite você testar valores dentro de uma variável ou expressão. Ela é compatível apenas com números inteiros e strings
+            case 1:
+            saida.innerHTML += `<p>${n1} + ${n2} = <strong>${n1+n2}</strong></p>`
+            break // O break é obrigatório em cada case. Se não for colocado, acontecerá a execução de vários comandos indesejados de outros cases
+            case 2:
+            saida.innerHTML += `<p>${n1} - ${n2} = <strong>${n1-n2}</strong></p>`
+            break
+            case 3:
+            saida.innerHTML += `<p>${n1} x ${n2} = <strong>${n1*n2}</strong></p>`
+            break
+            case 4:
+            saida.innerHTML += `<p>${n1} / ${n2} = <strong>${(n1/n2).toLocaleString('pt-BR')}</strong></p>` // O método toLocaleString() é muito útil para mostrar números de forma mais compatível com o que usamos aqui no Brasil.
+            break
+            default: // Se o usuário não digitar nenhum dos valores acima, vai cair aqui
+            saida.innerHTML += `<p>OPÇÃO INVÁLIDA! Você digitou ${n1} e ${n2}, mas não sei o que fazer com eles. </p>`
+            break
+            }
+            */
+        }
+    </script>
+</body>
+</html>
