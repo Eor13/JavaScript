@@ -36,11 +36,11 @@
             let max = 100
             let dif =max-min
             let aleatorio = Math.random()
-            pc = min + Math.trunc(dif*aleatorio)//essa variavel substitui o 1 pc(linha 18).
+            pc = min + Math.trunc(dif*aleatorio)//essa variavel substitui o primeiro pc(linha 18).
             }
 
             function adivinha() {
-            joke = Number(window.prompt('Qual é o seu palpite?'))//essa variavel substitui o 1 joke(linha 19).
+            joke = Number(window.prompt('Qual é o seu palpite?'))//essa variavel substitui o primeiro joke(linha 19).
             if (joke < pc){
                 res.innerHTML += `<p>Você falou ${joke}. Meu número é <strong>MAIOR</strong>.</p>`
             }else if(joke > pc){
