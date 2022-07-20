@@ -12,10 +12,6 @@ while(c<=10){
     c++
 }
 
-
-
-
-
 /*console.log('Tudo bem?')
 console.log('Tudo bem?')
 console.log('Tudo bem?')
