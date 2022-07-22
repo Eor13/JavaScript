@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do Dia</title>
+    <title>Contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
         <div>
-
+            <label class="labels" for="inicio">Início:
+                <input type="number" name="ninicio" id="inicio">
+            </label>
+            <br>
+            <label class="labels" for="fim">Fim: 
+                <input type="number" name="nfim" id="fim">
+            </label>
+            <br>
+            <label class="labels" for="intervalo">Passo:
+                <input type="number" name="nintervalo" id="intervalo">
+            </label>
+            <br>
+            <input type="button"  class="labels" value="Contar" onclick="contar()">
         </div>
-        <div>
-            
+        <div id="res">
+            Preparando contagem...
         </div>
     </section>
     <footer>
