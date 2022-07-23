@@ -6,7 +6,7 @@ var passo = window.document.getElementById('intervalo')
 var res = window.document.getElementById('res')
 
 if (star.value.length == 0 || end.value.length == 0 || passo.value.length == 00) {
-    res.innerHTML += ` Impossível contar.`
+    res.innerHTML = ` Impossível contar.`
     //window.alert('[Error] Faltam dados')
 }else{
     res.innerHTML = 'Contando <br>'
@@ -15,7 +15,7 @@ if (star.value.length == 0 || end.value.length == 0 || passo.value.length == 00)
     var p = Number(passo.value)
     var c = i
     if (p <= 0){
-        window.alert('Passo inválido! Considerando o PASSO 1')
+        window.alert('Passo inválido! Considere o PASSO como 1')
         p = 1
     }
 
@@ -33,10 +33,6 @@ if (star.value.length == 0 || end.value.length == 0 || passo.value.length == 00)
         } while(c>=f)
     }
     res.innerHTML += ` &#x1F3C1;`
-
-
-
-
 }
 
 
