@@ -1,9 +1,11 @@
 @charset "UTF-8";
 
 body{
-    background-color: rgb(67, 67, 252);
+    background-color: rgb(136, 42, 34);
     font:normal 16pt 'Arial';
     margin: auto;
+    width: 100%;
+    overflow: hidden;
 }
 header{
     color: white;
@@ -14,7 +16,7 @@ section{
     border-radius: 10px;
     padding: 15px;
     margin: auto;
-    width: 500px;
+    width: 460px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.494);
 }
 
